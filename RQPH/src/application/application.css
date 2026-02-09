@@ -1,0 +1,597 @@
+/* @font-face {
+   font-family: "Roboto";
+   src: url("Roboto-Regular.ttf");
+}
+.root {
+    -fx-font-family: "Roboto";
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.root {
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+.main-background {
+    -fx-background-color: #120630;
+    -fx-padding: 20px;
+}
+
+.header-text {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.brand-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+.content-card {
+    -fx-background-color: white;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+.headline-text {
+    -fx-text-fill: black;
+    -fx-font-size: 42px;
+    -fx-font-weight: 400; 
+}
+
+/* "Simplify patient flow..." */
+.description-text {
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+    -fx-padding: 2px 0;
+}
+
+.login-button {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: #12063a;
+    -fx-font-size: 24px;
+    -fx-padding: 10px 40px;
+    -fx-cursor: hand;
+    -fx-min-width: 150px;
+}
+
+.login-button:hover {
+    -fx-background-color: #12063a;
+}
+
+.login-button:pressed {
+    -fx-background-color: #12063a;
+}
+
+.login-header {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.underlined-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #999999 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px 0;
+    -fx-font-size: 14px;
+}
+
+.underlined-input:focused {
+    -fx-border-color: transparent transparent black transparent;
+}
+
+.black-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 30px;
+    -fx-cursor: hand;
+    -fx-min-width: 100px;
+}
+
+.black-button:hover {
+    -fx-background-color: #333333;
+}
+
+.brand-text-serif {
+    -fx-font-family: 'System'; 
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+.circle-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0.5, 0, 0);
+    -fx-padding: 2px;
+}
+.table-view .column-header {
+    -fx-background-color: #2b206d; 
+}
+
+.table-view .column-header, 
+.table-view .column-header .label {
+    -fx-text-fill: White;          
+    -fx-font-weight: bold;         
+    -fx-alignment: CENTER;         
+}
+.table-view .table-cell {
+    -fx-text-fill: black;           
+    -fx-font-weight: normal;         
+    -fx-alignment: CENTER;          
+}
+.button:hover {
+    -fx-background-color: #44444E;
+    -fx-text-fill: White;        
+}
+.hyperlink{
+	-fx-text-fill:White;
+}
+.hyperlink:hover {
+    -fx-underline: false;
+    -fx-text-fill: Orange;  
+}
+.inner-shadow-box {
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.35), 15, 0.2, 0, 3);
+}
+#navBar {
+    -fx-fill: #120630;
+}
+
+#sideBar {
+    -fx-fill: #12063a;
+}
+
+#logoLabel {
+    -fx-text-fill: #FFFFFF;   
+    -fx-font-size: 18.0px;      
+    -fx-font-weight: bold;    
+}
+
+#dateTimeLabel {
+	-fx-text-fill: #FFFFFF;   
+    -fx-font-size: 18.0px;      
+    -fx-font-weight: bold;    
+}
+
+#userAccount {
+	-fx-text-fill: #FFFFFF;
+	-fx-font-size: 12.0px;
+	-fx-font-weight: bold;
+}
+
+#typeOfAccount {
+	-fx-text-fill: #DADADA;
+	-fx-font-size: 10.0px;
+	-fx-font-weight: normal;
+}
+
+#sideBarMenu1, #sideBarMenu2, #sideBarMenu3, #sideBarMenu4 {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    -fx-cursor: hand;
+}
+
+#sideBarMenu1:hover,
+#sideBarMenu2:hover,
+#sideBarMenu3:hover,
+#sideBarMenu4:hover {
+    -fx-background-color: #1E1E4F;
+    -fx-text-fill: #E5E5E5;
+}
+
+.hyperlink{
+	-fx-text-fill:White;
+}
+.hyperlink:hover {
+    -fx-underline: false;
+    -fx-text-fill: Orange;  
+}
+
+#totalWaitingContainer {
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-padding: 5 0 0 5;
+}
+
+#totalWaiting {
+	-fx-text-fill: #171717;
+	-fx-font-size: 10.0px;
+	-fx-font-weight: bold;
+}
+
+#totalWaitingRecords {
+	-fx-text-fill: #171717;
+	-fx-font-size: 18.0px;
+	-fx-font-weight: bold;
+}
+
+#totalServedContainer {
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-padding: 5 0 0 5;
+}
+
+#totalServed {
+	-fx-text-fill: #171717;
+	-fx-font-size: 10.0px;
+	-fx-font-weight: bold;	
+}
+
+#totalServedRecords {
+	-fx-text-fill: #171717;
+	-fx-font-size: 18.0px;
+	-fx-font-weight: bold;
+}
+
+#averageWaitingContainer {
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-padding: 5 0 0 5;
+}
+
+#averageWaiting {
+	-fx-text-fill: #171717;
+	-fx-font-size: 10.0px;
+	-fx-font-weight: bold;
+}
+
+#averageWaitingRecords {
+	-fx-text-fill: #171717;
+	-fx-font-size: 18.0px;
+	-fx-font-weight: bold;
+}
+
+#longestWaitContainer {
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-padding: 5 0 0 5;
+}
+
+#longestWait {
+	-fx-text-fill: #171717;
+	-fx-font-size: 10.0px;
+	-fx-font-weight: bold;
+}
+
+#longestWaitRecords {
+	-fx-text-fill: #171717;
+	-fx-font-size: 18.0px;
+	-fx-font-weight: bold;
+}
+
+#triageLevelContainer {
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-padding: 10 0 0 15;
+}
+
+#patientCountTL {
+	-fx-text-fill: #171717;
+	-fx-font-size: 12.0px;
+	-fx-font-weight: bold;
+}
+
+#triageLevel1 {
+    -fx-fill: #4347FF;          
+    -fx-stroke: #171717;        
+    -fx-stroke-width: none;      
+}
+
+#l1 {
+    -fx-text-fill: #FFFFFF;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#resuscitation {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarL1 {
+	-fx-accent: #4347FF; 
+	-fx-padding: 0 0 0 5;
+}
+
+#resuscitationRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#triageLevel2 {
+    -fx-fill: #FF3838;          
+    -fx-stroke: #171717;        
+    -fx-stroke-width: none;      
+}
+
+#l2 {
+    -fx-text-fill: #FFFFFF;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#emergent {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarL2 {
+	-fx-accent: #FF3838;
+	-fx-padding: 0 0 0 5;
+}
+
+#emergentRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#triageLevel3 {
+    -fx-fill: #FAC000;          
+    -fx-stroke: #171717;        
+    -fx-stroke-width: none;      
+}
+
+#l3 {
+    -fx-text-fill: #FFFFFF;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#urgent {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarL3 {
+	-fx-accent: #FAC000;
+	-fx-padding: 0 0 0 5;
+}
+
+#urgentRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#triageLevel4 {
+    -fx-fill: #23D400;          
+    -fx-stroke: #171717;        
+    -fx-stroke-width: none;      
+}
+
+#l4 {
+    -fx-text-fill: #FFFFFF;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#lessUrgent {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarL4 {
+	-fx-accent: #23D400;
+	-fx-padding: 0 0 0 5;
+}
+
+#lessUrgentRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#triageLevel5 {
+    -fx-fill: #404040;          
+    -fx-stroke: #171717;        
+    -fx-stroke-width: none;      
+}
+
+#l5 {
+    -fx-text-fill: #FFFFFF;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#nonUrgent {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarL5 {
+	-fx-accent: #404040;
+	-fx-padding: 0 0 0 5;
+}
+
+#nonUrgentRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#regular { 
+    -fx-fill: #FFFFFF;          
+    -fx-stroke: #171717;         
+    -fx-stroke-width: 1;      
+}
+
+#r { 
+    -fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+#reg { 
+	-fx-text-fill: #171717;     
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 5;
+}
+
+#progressBarRegular { 
+	-fx-accent: #000000;
+	-fx-padding: 0 0 0 5;
+}
+
+#regularRecords { 
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 10;
+}
+
+#breakLine {
+	-fx-fill: #171717;
+}
+
+#totalPatients {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 10;
+}
+
+#totalPatientsRecords {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 455;
+}
+
+#systemStatusContainer {
+    -fx-border-color: #171717;   
+    -fx-border-width: 2;         
+}
+
+#systemStatus {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 15;
+}
+
+#statusIndicator {
+	-fx-fill: #52D247;
+}
+
+#systemStatusIndicator {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 15 0 0;
+}
+
+/* Backup & Reset (Main Contents) */
+#availableOptionsBR {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 18.0px;
+    -fx-font-weight: bold;
+}
+
+#manageSystemDP {
+	-fx-text-fill: #171717;     
+    -fx-font-size: 12.0px;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 10 0;
+}
+
+#createContainer {
+	-fx-background-color: #120630;
+	-fx-background-radius: 8;
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-border-radius: 8;
+	-fx-padding: 5 0 0 5;
+	-fx-translate-y: -20;
+}
+
+#restoreContainer {
+	-fx-background-color: #120630;
+	-fx-background-radius: 8;
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-border-radius: 8;
+	-fx-padding: 5 0 0 5;
+	-fx-translate-y: -20; 
+	
+}
+
+#viewContainer {
+	-fx-background-color: #120630;
+	-fx-background-radius: 8;
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-border-radius: 8;
+	-fx-padding: 5 0 0 5;
+	-fx-translate-y: -40;
+}
+
+#resetContainer {
+	-fx-background-color: #120630;
+	-fx-background-radius: 8;
+	-fx-border-color: #171717;
+	-fx-border-width: 2;
+	-fx-border-radius: 8;
+	-fx-padding: 5 0 0 5;
+	-fx-translate-y: -40;
+}
+#createContainer:hover, #restoreContainer:hover, #viewContainer:hover, #resetContainer:hover{
+	-fx-background-color:black;
+}
+
+#createNewBackup, 
+#restoreFromBackup,
+#viewBackupHistory,
+#factoryReset {
+	-fx-text-fill: #FFFFFF;     
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 0 10;
+}
+#createNewBackupDef, 
+#restoreFromBackupDef,
+#viewBackupHistoryDef,
+#factoryResetDef {
+	-fx-text-fill: #FFFFFF;     
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    -fx-padding: 10 0 0 20;
+}
+
+#createButton, 
+#restoreButton,
+#viewButton,
+#resetButton {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 6px;
+    -fx-border-color: none;
+	-fx-text-fill: #171717;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}

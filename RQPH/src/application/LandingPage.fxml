@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" styleClass="main-background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LandingPageController">
+   
+   <top>
+      <BorderPane prefHeight="8.0" prefWidth="860.0" BorderPane.alignment="CENTER">
+         <left>
+            <Label styleClass="header-text, brand-text" text="ResquePH" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="dateTimeLabel" styleClass="header-text" text="YYYY-MM-DD HH:MM" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </top>
+   
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="486.0" prefWidth="803.0" spacing="10.0" styleClass="content-card">
+               <children>
+                  <Label styleClass="headline-text" text="Streamline your healthcare" />
+                  <Label styleClass="headline-text" text="queue management" />
+                  
+                  <Label styleClass="description-text" text="Simplify patient flow and reduce wait times with our intelligent queue management system." wrapText="true" />
+                  <Label styleClass="description-text" text="Designed for hospitals and clinics to improve patient experience and operational efficiency." wrapText="true" />
+                  
+                  <VBox alignment="CENTER" prefHeight="80.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToLogin" styleClass="login-button" text="Login" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

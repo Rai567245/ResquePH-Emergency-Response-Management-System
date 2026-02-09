@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backupResetAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BackupResetController">
+	<children>
+
+		<!-- Navbar Section -->
+		<Rectangle fx:id="navBar" height="46.0" layoutY="0.0" width="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
+		<!-- Sidebar Section -->
+		<Rectangle fx:id="sideBar" height="456.0" layoutX="-1.0" layoutY="46.4" width="180.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="45.0" />
+
+		<!-- Logo Section -->
+		<Label fx:id="logoLabel" layoutX="40.0" layoutY="14.0" text="ResquePH">
+			<font>
+				<Font name="Roboto" />
+			</font>
+		</Label>
+
+		<!-- Date & Time Section -->
+		<Label fx:id="dateTimeLabel" layoutX="615.0" layoutY="14.0" prefHeight="27.0" prefWidth="181.0" text="00/00/0000 00:00:00">
+			<font>
+				<Font name="Roboto" />
+			</font>
+		</Label>
+      <Hyperlink fx:id="dashboard" layoutX="45.0" layoutY="306.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="openQueue" layoutX="45.0" layoutY="241.0" text="Queue Display" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="backupReset" layoutX="45.0" layoutY="370.0" text="Backup &amp; Reset" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="openPatient" layoutX="45.0" layoutY="180.0" text="Patient's Info" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="logOut" layoutX="45.0" layoutY="434.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+	  </Hyperlink>
+	  <ImageView fx:id="logoImage" fitHeight="56.0" fitWidth="58.0" layoutX="61.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@RQPH.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="14.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-note-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="16.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-dashboard-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="14.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-sync-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="48.0" layoutX="18.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-exit-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="11.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-queue-64.png" />
+               </image>
+            </ImageView>
+		<VBox layoutX="203.0" layoutY="58.0" prefHeight="62.0" prefWidth="575.0" spacing="10">
+			<children>
+				<Label fx:id="availableOptionsBR" prefHeight="23.0" prefWidth="500.0" text="Available Options for Backup &amp; Reset">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+				<Label fx:id="manageSystemDP" prefHeight="23.0" prefWidth="198.0" text="Manage System Data Protection">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+			</children>
+		</VBox>
+
+		<VBox fx:id="createContainer" layoutX="203.0" layoutY="149.0" prefHeight="170.0" prefWidth="280.0" spacing="10" styleClass="backupBox">
+			<children>
+				<Label fx:id="createNewBackup" text="Create New Backup">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+				<Label fx:id="createNewBackupDef" alignment="CENTER" prefWidth="250" text="Saves a current snapshot of all system data and configurations, providing a reliable backup point for system maintenance and recovery." wrapText="true" />
+				<Button fx:id="createButton" mnemonicParsing="false" onAction="#createBackup" text="Create">
+					<font>
+						<Font name="Roboto" />
+					</font>
+					<VBox.margin>
+						<Insets left="200" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+		<VBox fx:id="restoreContainer" layoutX="498.0" layoutY="149.0" prefHeight="170.0" prefWidth="280.0" spacing="10">
+			<children>
+				<Label fx:id="restoreFromBackup" text="Restore From Backup">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+				<Label fx:id="restoreFromBackupDef" alignment="CENTER" prefWidth="250" text="Select a previously saved file to roll back the system to an earlier state, restoring all configurations and data from that point in time." wrapText="true" />
+				<Button fx:id="restoreButton" mnemonicParsing="false" onAction="#restoreBackup" text="Restore">
+					<font>
+						<Font name="Roboto" />
+					</font>
+					<VBox.margin>
+						<Insets left="190" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+		<VBox fx:id="viewContainer" layoutX="203.0" layoutY="346.0" prefHeight="170.0" prefWidth="280.0" spacing="20">
+			<children>
+				<Label fx:id="viewBackupHistory" text="View Backup History">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+				<Label fx:id="viewBackupHistoryDef" alignment="CENTER" prefWidth="250" text="See a list of all successful backups, file size, and creation dates, providing a clear overview of your system’s backup history." wrapText="true" />
+				<Button fx:id="viewButton" mnemonicParsing="false" onAction="#viewBackup" text="View">
+					<font>
+						<Font name="Roboto" />
+					</font>
+					<VBox.margin>
+						<Insets left="210" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+		<VBox fx:id="resetContainer" layoutX="498.0" layoutY="346.0" prefHeight="170.0" prefWidth="280.0" spacing="10">
+			<children>
+				<Label fx:id="factoryReset" text="Factory Reset">
+					<font>
+						<Font name="Roboto" />
+					</font>
+				</Label>
+				<Label fx:id="factoryResetDef" alignment="CENTER" prefWidth="250" text="Permanently delete all data and restore the system to its initial default settings, ensuring a clean and fresh start for new configurations." wrapText="true" />
+
+				<Button fx:id="resetButton" mnemonicParsing="false" onAction="#factoryReset" text="Reset">
+					<font>
+						<Font name="Roboto" />
+					</font>
+					<VBox.margin>
+						<Insets left="200" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>
